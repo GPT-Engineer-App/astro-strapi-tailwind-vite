@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Wallet, Shield, Zap } from "lucide-react";
+import { ArrowRight, Wallet, Shield, Zap, CreditCard, Smartphone, CheckCircle } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   const scrollToNextSection = () => {
@@ -68,6 +69,77 @@ const Index = () => {
               {/* Placeholder for RoPay illustration */}
               <div className="text-center">
                 <p className="text-lg text-muted-foreground">Ilustrație RoPay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Cum funcționează? Section */}
+      <section id="cum-functioneaza" className="py-16 bg-gradient-to-b from-gray-100 to-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Cum funcționează?</h2>
+          <div className="space-y-16">
+            {/* Step 1 */}
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                <Card className="bg-white shadow-lg">
+                  <CardContent className="p-6">
+                    <CreditCard className="h-12 w-12 text-primary mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">1. Înregistrare și Conectare Card</h3>
+                    <p className="text-muted-foreground">
+                      Creați-vă contul RoPay și conectați-vă cardul bancar în siguranță pentru a începe să folosiți serviciul.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="md:w-1/2">
+                {/* Placeholder for step 1 illustration */}
+                <div className="bg-muted rounded-lg p-4 text-center">
+                  <p className="text-lg text-muted-foreground">Ilustrație Înregistrare</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col md:flex-row-reverse items-center">
+              <div className="md:w-1/2 md:pl-8 mb-8 md:mb-0">
+                <Card className="bg-white shadow-lg">
+                  <CardContent className="p-6">
+                    <Smartphone className="h-12 w-12 text-primary mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">2. Efectuare Plăți</h3>
+                    <p className="text-muted-foreground">
+                      Folosiți aplicația RoPay pentru a scana coduri QR, a trimite bani prietenilor sau a plăti facturile cu ușurință.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="md:w-1/2">
+                {/* Placeholder for step 2 illustration */}
+                <div className="bg-muted rounded-lg p-4 text-center">
+                  <p className="text-lg text-muted-foreground">Ilustrație Plăți</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                <Card className="bg-white shadow-lg">
+                  <CardContent className="p-6">
+                    <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">3. Gestionare și Monitorizare</h3>
+                    <p className="text-muted-foreground">
+                      Urmăriți-vă cheltuielile, setați bugete și primiți notificări instantanee pentru toate tranzacțiile.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="md:w-1/2">
+                {/* Placeholder for step 3 illustration */}
+                <div className="bg-muted rounded-lg p-4 text-center">
+                  <p className="text-lg text-muted-foreground">Ilustrație Gestionare</p>
+                </div>
               </div>
             </div>
           </div>
