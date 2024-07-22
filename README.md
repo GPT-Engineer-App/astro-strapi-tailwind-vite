@@ -1,38 +1,72 @@
-# astro-strapi-tailwind-vite
+# Astro Strapi Tailwind Setup
 
-Create a basic website structure using Astro, Strapi, and Tailwind. Integrate vite. no react. 
+This project is a basic website structure using Astro, Strapi, and Tailwind CSS, with Vite as the build tool.
 
-## Collaborate with GPT Engineer
+## Getting Started
 
-This is a [gptengineer.app](https://gptengineer.app)-synced repository 🌟🤖
+### Prerequisites
 
-Changes made via gptengineer.app will be committed to this repo.
+- Node.js (v14 or later)
+- npm or yarn
 
-If you clone this repo and push changes, you will have them reflected in the GPT Engineer UI.
+### Installation
 
-## Tech stack
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/astro-strapi-tailwind-setup.git
+   cd astro-strapi-tailwind-setup
+   ```
 
-This project is built with .
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-- Vite
-- React
-- shadcn-ui
-- Tailwind CSS
+### Development
 
-## Setup
+To start the development server:
 
-```sh
-git clone https://github.com/GPT-Engineer-App/astro-strapi-tailwind-vite.git
-cd astro-strapi-tailwind-vite
-npm i
 ```
-
-```sh
 npm run dev
 ```
 
-This will run a dev server with auto reloading and an instant preview.
+This will start the Astro development server. Open your browser and navigate to `http://localhost:3000` to see the site.
 
-## Requirements
+### Building for Production
 
-- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+To build the site for production:
+
+```
+npm run build
+```
+
+This will generate a production-ready build in the `dist` directory.
+
+### Preview Production Build
+
+To preview the production build:
+
+```
+npm run preview
+```
+
+## Project Structure
+
+- `src/`: Source files
+  - `layouts/`: Layout components
+  - `pages/`: Astro pages
+- `public/`: Static assets
+- `astro.config.mjs`: Astro configuration
+- `tailwind.config.cjs`: Tailwind CSS configuration
+
+## Strapi Integration
+
+(Note: Strapi setup and integration will be added in future updates)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
