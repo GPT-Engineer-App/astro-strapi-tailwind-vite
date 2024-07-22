@@ -1,8 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Fetch posts from Strapi
+const response = await fetch('http://localhost:1337/api/posts');
+const { data } = await response.json();
+const posts = data.map(post => post.attributes);
 ---
 
 <Layout title="Welcome to Astro">
 	<h1 class="text-4xl font-bold mb-4">Welcome to Astro</h1>
-	<p class="text-lg">This is a basic Astro site with Tailwind CSS.</p>
+	<p class="text-lg mb-4">This is a basic Astro site with Tailwind CSS and Strapi integration.</p>
+	
+	<h2 class="text-2xl font-bold mb-2">Latest Posts</h2>
+	<ul class="space-y-4">
+		{posts.map(post => (
+			<li class="border p-4 rounded-md">
+				<h3 class="text-xl font-semibold">{post.title}</h3>
+				<p class="text-gray-600">{post.content.substring(0, 100)}...</p>
+				<a href={`/post/${post.slug}`} class="text-blue-500 hover:underline">Read more</a>
+			</li>
+		))}
+	</ul>
 </Layout>

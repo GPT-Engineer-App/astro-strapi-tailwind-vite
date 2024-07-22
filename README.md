@@ -17,34 +17,54 @@ This project is a basic website structure using Astro, Strapi, and Tailwind CSS,
    cd astro-strapi-tailwind-setup
    ```
 
-2. Install dependencies:
+2. Install dependencies for Astro frontend:
    ```
+   npm install
+   ```
+
+3. Install dependencies for Strapi backend:
+   ```
+   cd strapi
    npm install
    ```
 
 ### Development
 
-To start the development server:
+To start the development servers:
 
-```
-npm run dev
-```
+1. Start Strapi backend:
+   ```
+   cd strapi
+   npm run develop
+   ```
 
-This will start the Astro development server. Open your browser and navigate to `http://localhost:3000` to see the site.
+2. In a new terminal, start Astro frontend:
+   ```
+   npm run dev
+   ```
+
+Open your browser and navigate to `http://localhost:3000` to see the Astro site. The Strapi admin panel will be available at `http://localhost:1337/admin`.
 
 ### Building for Production
 
 To build the site for production:
 
-```
-npm run build
-```
+1. Build Strapi backend:
+   ```
+   cd strapi
+   npm run build
+   ```
 
-This will generate a production-ready build in the `dist` directory.
+2. Build Astro frontend:
+   ```
+   npm run build
+   ```
+
+This will generate production-ready builds for both Strapi and Astro.
 
 ### Preview Production Build
 
-To preview the production build:
+To preview the Astro production build:
 
 ```
 npm run preview
@@ -52,16 +72,26 @@ npm run preview
 
 ## Project Structure
 
-- `src/`: Source files
+- `src/`: Astro source files
   - `layouts/`: Layout components
   - `pages/`: Astro pages
 - `public/`: Static assets
 - `astro.config.mjs`: Astro configuration
 - `tailwind.config.cjs`: Tailwind CSS configuration
+- `strapi/`: Strapi backend
+  - `src/`: Strapi source files
+  - `config/`: Strapi configuration files
 
 ## Strapi Integration
 
-(Note: Strapi setup and integration will be added in future updates)
+The Strapi backend is set up with a basic "Post" content type. To create and manage posts:
+
+1. Go to `http://localhost:1337/admin`
+2. Create an admin account
+3. Navigate to "Content Manager" > "Post"
+4. Create new posts
+
+The Astro frontend fetches and displays these posts on the homepage and individual post pages.
 
 ## Contributing
 
